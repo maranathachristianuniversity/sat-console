@@ -1,10 +1,19 @@
 <?php
+/**
+ * satconsole.
+ * MVC PHP Framework for quick and fast PHP Application Development.
+ * Copyright (c) 2020, IT Maranatha
+ *
+ * @author Didit Velliz
+ * @link https://github.com/maranathachristianuniversity/sat-console
+ * @since Version 0.2.0
+ */
 
-namespace pukoconsole\util;
+namespace satconsole\util;
 
 /**
  * Trait TestingToolkit
- * @package pukoconsole\util
+ * @package satconsole\util
  */
 trait TestingToolkit
 {

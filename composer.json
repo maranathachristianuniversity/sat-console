@@ -1,30 +1,32 @@
 {
-  "name": "puko/console",
-  "description": "Advanced console util that make pukoframework get things done on the fly",
+  "name": "maranathachristianuniversity/sat-console",
+  "description": "Advanced console util that make sat-framework get things done right",
   "type": "library",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "license": "MIT",
   "authors": [
     {
-      "name": "velliz",
-      "email": "diditvelliz@outlook.com",
-      "homepage": "http://velliz.github.io",
+      "name": "IT Maranatha",
+      "email": "dwa.admin@outlook.com",
+      "homepage": "https://www.maranatha.edu",
       "role": "Lead Developer"
     }
   ],
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/Velliz/pukoconsole"
+      "url": "https://github.com/maranathachristianuniversity/sat-console"
     }
   ],
   "require": {
     "php": ">=7.0",
-    "ext-pdo": "*"
+    "ext-pdo": "*",
+    "ext-json": "*",
+    "ext-curl": "*"
   },
   "autoload": {
     "psr-4": {
-      "pukoconsole\\": "src/"
+      "satconsole\\": "src/"
     }
   }
 }

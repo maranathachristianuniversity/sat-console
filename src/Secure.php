@@ -1,13 +1,22 @@
 <?php
+/**
+ * satconsole.
+ * MVC PHP Framework for quick and fast PHP Application Development.
+ * Copyright (c) 2020, IT Maranatha
+ *
+ * @author Didit Velliz
+ * @link https://github.com/maranathachristianuniversity/sat-console
+ * @since Version 0.2.0
+ */
 
-namespace pukoconsole;
+namespace satconsole;
 
-use pukoconsole\util\Echos;
-use pukoconsole\util\Input;
+use satconsole\util\Echos;
+use satconsole\util\Input;
 
 /**
  * Class Secure
- * @package pukoconsole
+ * @package satconsole
  */
 class Secure
 {

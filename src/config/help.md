@@ -1,5 +1,5 @@
 
--- Puko Framework Console --
+-- SAT Framework Console --
 
 setup    Installation
          [db]

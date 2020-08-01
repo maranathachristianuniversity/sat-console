@@ -4,7 +4,7 @@ namespace plugins\elements\{{namespaces}};
 
 use pte\exception\PteException;
 use pte\Parts;
-use pukoframework\Framework;
+use satframework\Framework;
 
 class {{class}} extends Parts
 {

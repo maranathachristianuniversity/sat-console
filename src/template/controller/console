@@ -2,7 +2,7 @@
 
 namespace {{namespace}};
 
-use pukoframework\middleware\Console;
+use satframework\middleware\Console;
 
 /**
  * #Template html false

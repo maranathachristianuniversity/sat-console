@@ -5,7 +5,7 @@ use PHPUnit\Framework\TestCase;
 class {{table}}ControllerTest extends TestCase
 {
 
-    use \pukoconsole\util\TestingToolkit;
+    use \satconsole\util\TestingToolkit;
 
     protected $bearer;
     protected $name;

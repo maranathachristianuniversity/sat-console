@@ -1,8 +1,8 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use pukoframework\config\Factory;
-use pukoframework\Framework;
+use satframework\config\Factory;
+use satframework\Framework;
 
 class {{table}}ModelTest extends TestCase
 {

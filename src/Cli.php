@@ -1,13 +1,22 @@
 <?php
+/**
+ * satconsole.
+ * MVC PHP Framework for quick and fast PHP Application Development.
+ * Copyright (c) 2020, IT Maranatha
+ *
+ * @author Didit Velliz
+ * @link https://github.com/maranathachristianuniversity/sat-console
+ * @since Version 0.2.0
+ */
 
-namespace pukoconsole;
+namespace satconsole;
 
-use pukoconsole\util\Commons;
-use pukoconsole\util\Echos;
+use satconsole\util\Commons;
+use satconsole\util\Echos;
 
 /**
  * Class Cli
- * @package pukoconsole
+ * @package satconsole
  */
 class Cli
 {
@@ -23,7 +32,7 @@ class Cli
             die(Echos::Prints("Cli parameter required!"));
         }
 
-        echo Echos::Prints("Puko project initialized at cli");
+        echo Echos::Prints("SAT project initialized at cli");
         echo Echos::Prints("Press (Ctrl + C) to stop.");
         echo exec("php cli {$command}");
 

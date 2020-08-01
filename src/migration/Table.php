@@ -1,12 +1,21 @@
 <?php
+/**
+ * satconsole.
+ * MVC PHP Framework for quick and fast PHP Application Development.
+ * Copyright (c) 2020, IT Maranatha
+ *
+ * @author Didit Velliz
+ * @link https://github.com/maranathachristianuniversity/sat-console
+ * @since Version 0.2.0
+ */
 
-namespace pukoconsole\migration;
+namespace satconsole\migration;
 
 use Exception;
 
 /**
  * Class Schema
- * @package pukoframework\pda
+ * @package satframework\pda
  */
 class Table
 {

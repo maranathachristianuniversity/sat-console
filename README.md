@@ -1,26 +1,9 @@
-# Puko Console
+## SAT Console
 
-Advanced console util that make *puko framework* get things done on the fly.
+Advanced console util that make *sat-framework* get things done right.
 
 Usage:
 
 ```bash
-php puko
+php sat
 ```
-
-Finished:
-* Auth
-* Controller
-* Database
-* Serve
-* Routes
-* Secure
-* Element
-* Cli
-
-Todo:
-* Automated Docs
-
-Future todo:
-* Migrate database
-* Generic database

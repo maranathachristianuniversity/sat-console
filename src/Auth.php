@@ -1,21 +1,21 @@
 <?php
 /**
- * pukoconsole.
- * Advanced console util that make pukoframework get things done on the fly.
- * Copyright (c) 2018, Didit Velliz
+ * satconsole.
+ * MVC PHP Framework for quick and fast PHP Application Development.
+ * Copyright (c) 2020, IT Maranatha
  *
  * @author Didit Velliz
- * @link https://github.com/velliz/pukoconsole
- * @since Version 0.1.0
+ * @link https://github.com/maranathachristianuniversity/sat-console
+ * @since Version 0.2.0
  */
 
-namespace pukoconsole;
+namespace satconsole;
 
-use pukoconsole\util\Echos;
+use satconsole\util\Echos;
 
 /**
  * Class Auth
- * @package pukoconsole
+ * @package satconsole
  */
 class Auth
 {
@@ -33,7 +33,7 @@ class Auth
     {
         if ($value === null) {
             die(Echos::Prints("class_name not specified. " .
-                "example: php puko setup auth UserAuth"
+                "example: php sat setup auth UserAuth"
             ));
         }
 

@@ -1,23 +1,23 @@
 <?php
 /**
- * pukoconsole.
- * Advanced console util that make pukoframework get things done on the fly.
- * Copyright (c) 2018, Didit Velliz
+ * satconsole.
+ * MVC PHP Framework for quick and fast PHP Application Development.
+ * Copyright (c) 2020, IT Maranatha
  *
  * @author Didit Velliz
- * @link https://github.com/velliz/pukoconsole
- * @since Version 0.1.0
+ * @link https://github.com/maranathachristianuniversity/sat-console
+ * @since Version 0.2.0
  */
 
-namespace pukoconsole;
+namespace satconsole;
 
-use pukoconsole\util\Commons;
-use pukoconsole\util\Echos;
-use pukoconsole\util\Input;
+use satconsole\util\Commons;
+use satconsole\util\Echos;
+use satconsole\util\Input;
 
 /**
  * Class Routes
- * @package pukoconsole
+ * @package satconsole
  */
 class Routes
 {

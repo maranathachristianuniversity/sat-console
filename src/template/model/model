@@ -2,8 +2,8 @@
 
 namespace plugins\model\{{schema}};
 
-use pukoframework\pda\DBI;
-use pukoframework\pda\Model;
+use satframework\pda\DBI;
+use satframework\pda\Model;
 
 /**
  * #Table {{table}}

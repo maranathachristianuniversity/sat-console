@@ -12,13 +12,13 @@
         'slack' => [
             'url' => '',
             'secure' => '',
-            'username' => 'puko-log',
+            'username' => 'sat-log',
             'active' => false
         ],
         'hook' => [
             'url' => '',
             'secure' => '',
-            'username' => 'puko-log',
+            'username' => 'sat-log',
             'active' => false
         ]
     ]
