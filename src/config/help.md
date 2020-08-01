@@ -1,5 +1,5 @@
 
--- SAT Framework Console --
+-- SAT Framework Console Menu --
 
 setup    Installation
          [db]

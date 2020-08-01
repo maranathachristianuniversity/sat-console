@@ -1,5 +1,5 @@
 <?php
 return [
-    'version' => '0.1.6',
+    'version' => '0.2.0',
     'repo' => 'https://api.github.com/repos/maranathachristianuniversity/elements/contents',
 ];
