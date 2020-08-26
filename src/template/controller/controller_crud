@@ -1,0 +1,133 @@
+<?php
+
+namespace controller\{{schema}};
+
+use DateTime;
+use Exception;
+use satframework\middleware\Service;
+use satframework\Request;
+
+/**
+ * #Template html false
+ */
+class {{entity}} extends Service
+{
+
+    /**
+     * @throws Exception
+     * @auth bearer true
+     */
+    public function create()
+    {
+        $param = Request::JsonBody();
+
+        //validations: empty check
+{{validations}}
+
+        //validations: customize here
+
+        //insert
+        ${{entity}} = new \plugins\model\{{schema}}\{{entity}}();
+{{vars}}
+
+        ${{entity}}->save();
+
+        //response
+        $data['{{entity}}'] = [
+    {{responses}}
+        ];
+
+        return $data;
+    }
+
+    /**
+     * @param string $id
+     * @return mixed
+     * @throws Exception
+     * @auth bearer true
+     */
+    public function update($id = '')
+    {
+        $param = Request::JsonBody();
+
+        //validations: empty check
+{{validations}}
+
+        //validations: customize here
+
+        //update
+        ${{entity}} = new \plugins\model\{{schema}}\{{entity}}($id);
+{{vars}}
+
+        ${{entity}}->modify();
+
+        //response
+        $data['{{entity}}'] = [
+    {{responses}}
+        ];
+
+        return $data;
+    }
+
+    /**
+     * @param string $id
+     * @throws Exception
+     * @auth bearer true
+     */
+    public function delete($id = '')
+    {
+        $user = new \plugins\model\{{schema}}\{{entity}}($id);
+
+        //delete logic here
+
+        return [
+            'deleted' => true
+        ];
+    }
+
+    /**
+     * @return mixed
+     * @throws Exception
+     */
+    public function search()
+    {
+        $keyword = [];
+
+        $param = Request::JsonBody();
+        //post addition filter here
+
+        $data['{{entity}}'] = \model\{{schema}}\{{entity}}Contracts::SearchData($keyword);
+        return $data;
+    }
+
+    /**
+     * @return array|mixed
+     * @throws Exception
+     */
+    public function table()
+    {
+        $keyword = [];
+
+        //post addition filter here
+
+        return \model\{{schema}}\{{entity}}Contracts::GetDataTable($keyword);
+    }
+
+    /**
+     * @param string $id
+     * @return mixed
+     * @throws Exception
+     */
+    public function read($id = '')
+    {
+        ${{entity}} = new \plugins\model\{{schema}}\{{entity}}($id);
+
+        //response
+        $data['{{entity}}'] = [
+    {{responses}}
+        ];
+
+        return $data;
+    }
+
+}

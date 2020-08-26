@@ -152,10 +152,12 @@ class Database
             $property = "";
             $primary = "";
 
+            $fieldlist = [];
             $data = [];
 
             foreach ($column as $k => $v) {
                 $initValue = 'null';
+                $fieldlist[] = strtolower($v['Field']);
 
                 if ($v['Key'] === 'PRI') {
                     $primary = $v['Field'];
@@ -232,6 +234,23 @@ class Database
                 file_put_contents("{$root}/tests/unit/controller/{$schema}/{$val['TABLE_NAME']}ControllerTest.php", $test_file);
             }
             //end region generate model test classes
+
+            $contracts_file = file_get_contents(__DIR__ . "/template/model/model_contract");
+            $contracts_file = str_replace('{{table}}', $val['TABLE_NAME'], $contracts_file);
+            $contracts_file = str_replace('{{schema}}', $schema, $contracts_file);
+            $contracts_file = str_replace('{{primary}}', $primary, $contracts_file);
+            $contracts_file = str_replace('{{primary-conditions}}', "$primary = @1", $contracts_file);
+            $contracts_file = str_replace('{{conditions}}', "dflag = 0", $contracts_file);
+
+            $contracts_file = str_replace('{{column}}', implode(', ', $fieldlist), $contracts_file);
+            $contracts_file = str_replace('{{table-specs}}', '"' . implode('", "', $fieldlist) . '"', $contracts_file);
+
+            if (!is_dir("{$root}/model/{$schema}")) {
+                mkdir("{$root}/model/{$schema}", 0777, true);
+            }
+            if (!file_exists("{$root}/model/{$schema}/{$val['TABLE_NAME']}Contracts.php")) {
+                file_put_contents("{$root}/model/{$schema}/{$val['TABLE_NAME']}Contracts.php", $contracts_file);
+            }
         }
     }
 
