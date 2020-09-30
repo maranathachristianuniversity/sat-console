@@ -2,7 +2,7 @@
   "name": "maranathachristianuniversity/sat-console",
   "description": "Advanced console util that make sat-framework get things done right",
   "type": "library",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "license": "MIT",
   "authors": [
     {
