@@ -8,6 +8,9 @@ setup    Installation
          [controller] [view/service] [name]
          [model] [add/update/remove] [name] [schema]
          
+refresh  Reload and apply updates from external sources without config change
+         [db]
+         
 routes   Routing
          [view/service/console/list/error/lost] [add/update/delete/crud] [url]
 
