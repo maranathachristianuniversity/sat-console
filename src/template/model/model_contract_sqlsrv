@@ -4,9 +4,9 @@ namespace model\{{schema}};
 
 use Exception;
 use plugins\model\{{schema}}\{{table}};
-use satframework\pda\DBI;
-use satframework\pda\ModelContracts;
-use satframework\plugins\DataTables;
+use pukoframework\pda\DBI;
+use pukoframework\pda\ModelContracts;
+use pukoframework\plugins\DataTables;
 
 /**
  * Class {{table}}Contracts
@@ -71,10 +71,10 @@ class {{table}}Contracts extends {{table}} implements ModelContracts
 
     public static function GetLastData()
     {
-        $sql = "SELECT {{column}}
+        $sql = "SELECT TOP 1 {{column}}
         FROM {{table}}
-        WHERE {{conditions}} ORDER BY {{primary}}
-        DESC LIMIT 1;";
+        WHERE {{conditions}}
+        ORDER BY {{primary}} DESC;";
         return DBI::Prepare($sql)->FirstRow();
     }
 
@@ -93,6 +93,7 @@ class {{table}}Contracts extends {{table}} implements ModelContracts
     public static function GetDataTable($condition = [])
     {
         $table = new DataTables(DataTables::POST);
+        $table->SetDBEngine('sqlsrv');
         $table->SetColumnSpec(array(
             {{table-specs}}
         ));
