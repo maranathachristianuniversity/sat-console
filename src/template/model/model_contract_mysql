@@ -4,9 +4,9 @@ namespace model\{{schema}};
 
 use Exception;
 use plugins\model\{{schema}}\{{table}};
-use pukoframework\pda\DBI;
-use pukoframework\pda\ModelContracts;
-use pukoframework\plugins\DataTables;
+use satframework\pda\DBI;
+use satframework\pda\ModelContracts;
+use satframework\plugins\DataTables;
 
 /**
  * Class {{table}}Contracts
