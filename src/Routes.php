@@ -115,6 +115,9 @@ class Routes
         ];
         $this->routes['router'][$this->attribute] = $data;
 
+        //sort ascending the routes definitions
+        ksort($this->routes['router']);
+
         file_put_contents(
             "{$this->root}/config/routes.php",
             '<?php $routes = ' . $this->var_export54($this->routes) . '; return $routes;'

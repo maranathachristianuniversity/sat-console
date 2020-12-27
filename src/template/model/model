@@ -11,6 +11,7 @@ use satframework\pda\DBI;
 use satframework\pda\Model;
 
 /**
+ * #DatabaseType {{dbtype}}
  * #Table {{table}}
  * #PrimaryKey {{primary}}
  */
