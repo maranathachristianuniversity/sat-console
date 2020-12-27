@@ -2,7 +2,7 @@
   "name": "maranathachristianuniversity/sat-console",
   "description": "Advanced console util that make sat-framework get things done right",
   "type": "library",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "authors": [
     {
@@ -19,10 +19,7 @@
     }
   ],
   "require": {
-    "php": ">=7.0",
-    "ext-pdo": "*",
-    "ext-json": "*",
-    "ext-curl": "*"
+    "php": ">=7.0"
   },
   "autoload": {
     "psr-4": {
