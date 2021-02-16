@@ -21,11 +21,13 @@ trait Echos
 {
 
     /**
-     * @param $var
+     * @param string $var
      * @param bool $break
+     * @param string $color
+     * @param string $bg
      * @return string
      */
-    public static function Prints($var, $break = true)
+    public static function Prints($var = '', $break = true, $color = '', $bg = ''): string
     {
         $c = new Colors();
         if ($break) {
