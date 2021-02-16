@@ -372,7 +372,7 @@ class Database
             }
             return $dbi;
         } catch (Exception $ex) {
-            die(Echos::Prints("Failed to connect."));
+            die(Echos::Prints("Failed to connect. Check database setting or make sure driver pdo_odbc installed!"));
         }
 
     }
@@ -413,7 +413,7 @@ class Database
             }
             return $dbi;
         } catch (Exception $ex) {
-            die(Echos::Prints("Failed to connect."));
+            die(Echos::Prints("Failed to connect. Check database setting or make sure driver pdo_odbc installed!"));
         }
     }
 
