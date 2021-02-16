@@ -11,6 +11,8 @@
 
 namespace satconsole\util;
 
+use satconsole\util\Colors;
+
 /**
  * Trait Echos
  * @package satconsole\util
@@ -25,10 +27,11 @@ trait Echos
      */
     public static function Prints($var, $break = true)
     {
+        $c = new Colors();
         if ($break) {
-            return sprintf("\n%s\n", $var);
+            return $c->getColoredString(sprintf("\n%s\n", $var), $color, $bg);
         }
-        return sprintf("%s\n", $var);
+        return $c->getColoredString(sprintf("%s\n", $var), $color, $bg);
     }
 
 }
