@@ -67,14 +67,12 @@ class Console
         switch ($this->GetCommand(Console::COMMAND)) {
             case 'setup':
                 return $this->Setup($this->GetCommand(Console::DIRECTIVE));
-                break;
             case 'routes':
                 return new Routes($this->root,
                     $this->GetCommand(Console::DIRECTIVE),
                     $this->GetCommand(Console::ACTION),
                     $this->GetCommand(Console::ATTRIBUTE)
                 );
-                break;
             case 'element':
                 return new Elements(
                     $this->root,
@@ -82,38 +80,30 @@ class Console
                     $this->GetCommand(Console::DIRECTIVE),
                     $this->GetCommand(Console::ACTION)
                 );
-                break;
             case 'docs':
                 return new Docs(
                     $this->root,
                     $this->GetCommand(Console::DIRECTIVE),
                     $this->GetCommand(Console::ACTION)
                 );
-                break;
             case 'serve':
                 return new Serve($this->GetCommand(Console::DIRECTIVE));
-                break;
             case 'tests':
                 return new Tests($this->GetCommand(Console::DIRECTIVE));
-                break;
             case 'help':
                 return $this->Help();
-                break;
             case 'cli':
                 return new Cli($this->GetCommand(Console::DIRECTIVE));
-                break;
             case 'generate':
                 return $this->Generate($this->GetCommand(Console::DIRECTIVE));
-                break;
+            case 'language':
+                return $this->Language($this->GetCommand(Console::DIRECTIVE));
             case 'refresh':
                 return $this->Refresh($this->GetCommand(Console::DIRECTIVE));
-                break;
             case 'version':
                 return $this;
-                break;
             default:
                 return $this->NotFound();
-                break;
         }
     }
 
@@ -132,6 +122,15 @@ class Console
                 return Echos::Prints("Generate exited with no process executed!");
                 break;
         }
+    }
+
+    /**
+     * @param $kind
+     * @return Language|string
+     */
+    public function Language($kind)
+    {
+        return new Language($this->root, $kind);
     }
 
     /**
