@@ -1,6 +1,9 @@
 {!css(<!-- place your custom CSS file here -->)}
 <div style="margin:10px;">
-    <p>This section of the page is coming soon...</p>
-    <p>IT Team is on progress to make this page working as soon as posible :)</p>
+    <p>Blank pages is proof that your routes looks right.</p>
+    <p>Happy designing :)</p>
 </div>
-{!js(<!-- place your custom JavaScript file here -->)}
+{!js(
+<script src="assets/scripts/{{lang}}/{{controller}}/{{function}}.js"></script>
+<!-- place your custom JavaScript file here -->
+)}
