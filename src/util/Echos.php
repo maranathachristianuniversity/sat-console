@@ -27,7 +27,7 @@ trait Echos
      * @param string $bg
      * @return string
      */
-    public static function Prints($var = '', $break = true, $color = '', $bg = ''): string
+    public function Prints($var = '', $break = true, $color = '', $bg = ''): string
     {
         $c = new Colors();
         if ($break) {

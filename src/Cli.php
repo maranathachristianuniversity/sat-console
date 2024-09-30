@@ -29,11 +29,11 @@ class Cli
     public function __construct($command = null)
     {
         if ($command === null) {
-            die(Echos::Prints("Cli parameter required!"));
+            die($this->Prints("Cli parameter required!"));
         }
 
-        echo Echos::Prints("SAT project initialized at cli");
-        echo Echos::Prints("Press (Ctrl + C) to stop.");
+        echo $this->Prints("SAT project initialized at cli");
+        echo $this->Prints("Press (Ctrl + C) to stop.");
         echo exec("php cli {$command}");
 
         return true;
@@ -44,7 +44,7 @@ class Cli
      */
     public function __toString()
     {
-        return Echos::Prints("Console is finished running!");
+        return $this->Prints("Console is finished running!");
     }
 
 }

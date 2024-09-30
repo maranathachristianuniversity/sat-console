@@ -54,7 +54,7 @@ class Console
         $this->root = $root;
         $this->args = $args;
         if (!file_exists(__DIR__ . "/config/init.php")) {
-            die(Echos::Prints('Console init file not found'));
+            die($this->Prints('Console init file not found'));
         }
         $this->config = (include __DIR__ . "/config/init.php");
     }
@@ -117,10 +117,8 @@ class Console
         switch ($kind) {
             case 'db':
                 return new Database($this->root, 'generate');
-                break;
             default:
-                return Echos::Prints("Generate exited with no process executed!");
-                break;
+                return $this->Prints("Generate exited with no process executed!");
         }
     }
 
@@ -143,10 +141,8 @@ class Console
         switch ($kind) {
             case 'db':
                 return new Database($this->root, 'refresh');
-                break;
             default:
-                return Echos::Prints("Refresh exited with no process executed!");
-                break;
+                return $this->Prints("Refresh exited with no process executed!");
         }
     }
 
@@ -160,23 +156,19 @@ class Console
         switch ($kind) {
             case 'db':
                 return new Database($this->root, 'setup');
-                break;
             case 'secure':
                 return new Secure($this->root);
-                break;
             case 'auth':
                 return new Auth(
                     $this->root,
                     $this->GetCommand(Console::ACTION)
                 );
-                break;
             case 'controller':
                 return new Controller(
                     $this->root,
                     $this->GetCommand(Console::ACTION),
                     $this->GetCommand(Console::ATTRIBUTE)
                 );
-                break;
             case 'model':
                 return new Models(
                     $this->root,
@@ -185,8 +177,7 @@ class Console
                     $this->GetCommand(Console::EPHEMERAL)
                 );
             default:
-                return Echos::Prints("Setup exited with no process executed!");
-                break;
+                return $this->Prints("Setup exited with no process executed!");
         }
     }
 
@@ -203,7 +194,7 @@ class Console
      */
     public function NotFound()
     {
-        return Echos::Prints("Command not found!");
+        return $this->Prints("Command not found!");
     }
 
     /**
@@ -220,7 +211,7 @@ class Console
      */
     public function __toString()
     {
-        return Echos::Prints("SAT Console {$this->config['version']}");
+        return $this->Prints("SAT Console {$this->config['version']}");
     }
 
 }

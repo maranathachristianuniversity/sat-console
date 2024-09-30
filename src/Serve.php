@@ -34,8 +34,8 @@ class Serve
             $port = 4000;
         }
         $this->port = $port;
-        echo Echos::Prints("SAT project initialized at localhost:{$port}");
-        echo Echos::Prints("Press (Ctrl + C) to stop.");
+        echo $this->Prints("SAT project initialized at localhost:{$port}");
+        echo $this->Prints("Press (Ctrl + C) to stop.");
         echo exec("php -S localhost:{$port} routes.php");
 
         return true;
@@ -43,7 +43,7 @@ class Serve
 
     public function __toString()
     {
-        return Echos::Prints("PHP server starred on port {$this->port}.");
+        return $this->Prints("PHP server starred on port {$this->port}.");
     }
 
 }

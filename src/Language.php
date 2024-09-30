@@ -2,7 +2,9 @@
 
 namespace satconsole;
 
+use satconsole\util\Commons;
 use satconsole\util\Echos;
+use satconsole\util\Input;
 
 /**
  * Class Language
@@ -10,6 +12,8 @@ use satconsole\util\Echos;
  */
 class Language
 {
+
+    use Commons, Input, Echos;
 
     var $glob_pattern = "/say\([A-Za-z$\'\"_, \[\]\n\t]+\)/";
     var $say_pattern = "/[$]|(?!\[)[[\'\"][A-Za-z0-9_]+[\'\"](?!\])/";
@@ -21,7 +25,7 @@ class Language
     public function __construct($root, $kinds)
     {
         if ($root === null) {
-            die(Echos::Prints('Invalid command!', true, 'light_red'));
+            die($this->Prints('Invalid command!', true, 'light_red'));
         }
 
         //retreive lang files
@@ -80,7 +84,7 @@ class Language
      */
     public function __toString()
     {
-        return Echos::Prints("Language file id.master.json updated!", true, 'green');
+        return $this->Prints("Language file id.master.json updated!", true, 'green');
     }
 
 }

@@ -32,7 +32,7 @@ class Auth
     public function __construct($root, $value)
     {
         if ($value === null) {
-            die(Echos::Prints("class_name not specified. " .
+            die($this->Prints("class_name not specified. " .
                 "example: php sat setup auth UserAuth"
             ));
         }
@@ -51,6 +51,6 @@ class Auth
 
     public function __toString()
     {
-        return Echos::Prints("Auth template with name {$this->value} created!");
+        return $this->Prints("Auth template with name {$this->value} created!");
     }
 }
